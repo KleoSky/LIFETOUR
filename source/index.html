@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lifetour</title>
+  <title>Lifetour - окунитесь в захватывающий мир путешействий</title>
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" sizes="32x32" href="public/32.png" type="image/png">
@@ -25,19 +25,114 @@
         <img src="/__spritemap#sprite-menu-icon-closed-view" widt="26" height="19">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <a class="header__logo-link logo-header" href="index.html">
-        <img src="/__spritemap#sprite-logo-view" widt="142" height="42" alt="Логотип сайта Lifetour">
-      </a>
+      <nav class="header__nav nav">
+        <a class="nav__logo-link logo-header" href="index.html">
+          <img src="/__spritemap#sprite-logo-view" widt="142" height="42" alt="Логотип сайта Lifetour">
+        </a>
+        <ul class="nav__list nav__list--closed">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Туры</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Обучение</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Фотографии</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <a class="nav__tel" href="tel:8-800-000-00-00">8 800 000-00-00</a>
+      </nav>
     </header>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <main class="body__main main">
+      <h1 class="visually-hidden">Экстремальные туры по красивейшим местам России</h1>
+      <section class="main__hero hero" data-test="hero">
+        <ul class="hero__list">
+          <li class="hero__item hero__item--active">
+            <div class="about__picture">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero-img-desktop-1@1x.webp 1x, img/hero-img-desktop-1@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/webp"
+                  srcset="img/hero-img-tablet-1@1x.webp 1x, img/hero-img-tablet-1@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-img-mobile-1@1x.webp 1x, img/hero-img-mobile-1@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
+                  srcset="img/hero-img-desktop-1@1x.jpg 1x, img/hero-img-desktop-1@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/jpeg"
+                  srcset="img/hero-img-tablet-1@1x.jpg 1x, img/hero-img-tablet-1@2x.jpg 2x">
+                <img src="img/hero-img-mobile-1@1x.jpg" srcset="img/hero-img-mobile-1@2x.jpg 2x" width="320" height="568"
+                  alt="Вид Кавказских гор">
+              </picture>
+            </div>
+            <h2>Захватывающие вершины Кавказа</h1>
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты
+                и совершите
+                восход на вершину горы Чегет.</p>
+              <button class="hero__button" type="button">Смотреть тур</button>
+              <span class="hero__duration">6 дней/5 ночей</span>
+              <span class="hero__level">Высокая сложность</span>
+          </li>
+          <li class="hero__item">
+            <h2>Невероятная природа Камчатки</h1>
+              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+              <button class="hero__button" type="button">Смотреть тур</button>
+              <span class="hero__duration">9 дней/10 ночей</span>
+              <span class="hero__level">Средняя сложность</span>
+          </li>
+          <li class="hero__item">
+            <h2>Магические пейзажи Алтайского Края</h1>
+              <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+              <button class="hero__button" type="button">Смотреть тур</button>
+              <span class="hero__duration">8 дней/7 ночей</span>
+              <span class="hero__level">Лёгкая сложность</span>
+          </li>
+        </ul>
+        <div class="hero__bullets">
+          <button class="hero__bullet hero__bullet--active" type="button">
+            <span class="visually-hidden">Показать первый тур</span>
+          </button>
+          <button class="hero__bullet" type="button">
+            <span class="visually-hidden">Показать второй тур</span>
+          </button>
+          <button class="hero__bullet" type="button">
+            <span class="visually-hidden">Показать третий тур</span>
+          </button>
+        </div>
+      </section>
+      <section class="main__tours tours" data-test="tours">
+        <div class="tours__title-wrapper">
+          <h2 class="tours__title title">Ближайшие туры</h2>
+          <span class="tours__title-shadow title__shadow" aria-hidden="true">Ближайшие туры</span>
+        </div>
+        <div class="tours__buttons">
+          <button class="tours__button tours__button--prev" type="button">
+            <span class="visually-hidden">Показать предыдущий тур</span>
+          </button>
+          <button class="tours__button tours__button--туче" type="button">
+            <span class="visually-hidden">Показать следующий тур</span>
+          </button>
+        </div>
+        <ul class="tours__list">
+          <li class="tours__item"></li>
+        </ul>
+      </section>
+      <div data-test="training">training</div>
+      <div data-test="about">about</div>
+      <div data-test="reviews">reviews</div>
+      <div data-test="adv">adv</div>
+      <div data-test="gallery">gallery</div>
+      <div data-test="form">form</div>
+      <div data-test="footer">footer</div>
+    </main>
   </div>
   <script type="module" src="js/main.js"></script>
 </body>
