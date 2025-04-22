@@ -1,4 +1,33 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+@import "./common/root";
+@import "./common/global";
+@import "./common/fonts";
+
+@import "./blocks/about";
+@import "./blocks/advantages";
+@import "./blocks/body";
+@import "./blocks/burger";
+@import "./blocks/button-next";
+@import "./blocks/button-prev";
+@import "./blocks/contacts";
+@import "./blocks/container";
+@import "./blocks/details";
+@import "./blocks/footer-nav";
+@import "./blocks/footer";
+@import "./blocks/form";
+@import "./blocks/gallery";
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/main";
+@import "./blocks/nav";
+@import "./blocks/process";
+@import "./blocks/review";
+@import "./blocks/reviews";
+@import "./blocks/social";
+@import "./blocks/title-shadow";
+@import "./blocks/title";
+@import "./blocks/tour";
+@import "./blocks/tours";
+@import "./blocks/trainer";
+@import "./blocks/training";
+@import "./blocks/visually-hidden";
