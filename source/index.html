@@ -21,36 +21,39 @@
   <div class="body__wrapper container">
     <header class="body__header header" data-test="header">
       <div class="header__wrapper">
-        <button class="header__button burger" type="button">
-          <!-- <img src="/__spritemap#sprite-menu-icon-closed-view" width="26" height="19"> -->
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="header__nav nav">
+        <div class="header__logo-wrapper">
+          <button class="header__button header__button--closed" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <a class="nav__logo-link" href="index.html">
             <img src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип сайта Lifetour">
           </a>
-          <ul class="nav__list nav__list--closed">
-            <li class="nav__item">
-              <a class="nav__link" href="#section-tours">Туры</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section-training">Обучение</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section-about">О нас</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section-reviews">Отзывы</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section-gallery">Фотографии</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section-contacts">Контакты</a>
-            </li>
-          </ul>
-          <a class="nav__tel" href="tel:8-800-000-00-00">8 800 000-00-00</a>
+        </div>
+        <nav class="header__nav nav header__nav--closed">
+          <div class="nav__wrapper">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#section-tours">Туры</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section-training">Обучение</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section-about">О нас</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section-reviews">Отзывы</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section-gallery">Фотографии</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section-contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
+        <a class="nav__tel" href="tel:8-800-000-00-00">8 800 000-00-00</a>
       </div>
     </header>
     <main class="body__main main">
