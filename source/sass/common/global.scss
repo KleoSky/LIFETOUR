@@ -8,3 +8,8 @@ body {
     background-color: var(--bg-base, #000080);
     color: var(--color-base, #000000);
   }
+
+  img {
+    line-height: 1;
+    object-fit: contain;
+  }
