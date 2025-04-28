@@ -35,7 +35,7 @@ const openMenu = () => {
     burger.addEventListener('click', () => {
         if (headerNav.classList.contains('header__nav--opened')) {
             closeMenu();
-         } else {
+        } else {
             burger.classList.add('header__button--opened');
             burger.classList.remove('header__button--closed');
             headerNav.classList.add('header__nav--opened');
@@ -46,7 +46,9 @@ const openMenu = () => {
     const menuItems = headerNav.querySelectorAll('.nav__link');
     menuItems.forEach(item => {
         item.addEventListener('click', () => {
-            closeMenu();
+            if (window.matchMedia('(max-width: 1439px)').matches) {
+                closeMenu();
+            }
             window.scrollTo(0, 0);
         });
     });
