@@ -13,6 +13,7 @@
 
 .header__nav--opened .nav__list {
     padding: 0;
+    padding-top: 6px;
     display: flex;
     flex-direction: column;
 }
@@ -21,7 +22,8 @@
     background-color: var(--bg-second, #000080);
     padding: 0 15px 50px;
     left: 0;
-    top: 120px;
+    top: 134px;
+    box-sizing: border-box;
 }
 
 .header__nav--closed .nav__list {
@@ -75,7 +77,7 @@
     }
 
     .header__nav--opened .nav__wrapper {
-        box-shadow: -225px 0 0 var(--bg-second), 195px 0 0 var(--bg-second);
+        box-shadow: -225px 0 0 var(--bg-second), 225px 0 0 var(--bg-second);
     }
 
 }

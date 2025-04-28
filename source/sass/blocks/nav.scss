@@ -26,20 +26,21 @@
     border: 1px solid transparent;
     padding: 3px;
 
-    &:not(:disabled):hover {
+    &:hover:not(.nav__link--disabled) {
         border-bottom: 1px solid var(--color-second, #ffffff);
     }
 
-    &:focus:not(:disabled),
-    &:focus-visible:not(:disabled) {
+    &:focus:not(.nav__link--disabled),
+    &:focus-visible:not(.nav__link--disabled) {
         border: 1px solid var(--color-second, #ffffff);
     }
 
-    &:active:not(:disabled) {
+    &:active:not(.nav__link--disabled) {
         border: 1px solid transparent;
         color: var(--bg-active, #000080);
     }
 
+    // Добавить класс .nav__link--disabled для отключения доступности
     &--disabled {
         border: 1px solid transparent;
         color: var(--bg-button-dis, #999999);
@@ -63,7 +64,7 @@
 
 @media (max-width: 767px) {
     .nav__list {
-        width: 320px;
+        width: 290px;
         gap: 22px;
     }
 
@@ -79,7 +80,7 @@
 
 @media (min-width: 768px) and (max-width: 1439px) {
     .nav__list {
-        width: 768px;
+        width: 678px;
         gap: 26px;
     }
 
