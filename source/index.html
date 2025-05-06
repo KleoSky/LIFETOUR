@@ -14,10 +14,6 @@
 </head>
 
 <body class="body">
-  <!-- пример использования спрайта -->
-  <!-- <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg> -->
   <div class="body__wrapper container">
     <header class="body__header header" data-test="header">
       <div class="header__wrapper">
@@ -26,7 +22,10 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <a class="nav__logo-link" href="index.html">
-            <img src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип сайта Lifetour">
+            <span class="visually-hidden">Логотип сайта Lifetour</span>
+            <svg width="142" height="42">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg>
           </a>
         </div>
         <nav class="header__nav nav header__nav--closed">
@@ -82,8 +81,10 @@
               и совершите
               восход на вершину горы Чегет.</p>
             <button class="hero__button" type="button">Смотреть тур</button>
-            <span class="hero__duration">6 дней/5 ночей</span>
-            <span class="hero__level">Высокая сложность</span>
+            <div class="hero__details">
+              <span class="hero__duration">6 дней/5 ночей</span>
+              <span class="hero__level">Высокая сложность</span>
+            </div>
           </li>
           <li class="hero__item">
             <div class="hero__picture">
@@ -106,8 +107,10 @@
             <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых
               уголков дикой природы в мире.</p>
             <button class="hero__button" type="button">Смотреть тур</button>
-            <span class="hero__duration">9 дней/10 ночей</span>
-            <span class="hero__level">Средняя сложность</span>
+            <div class="hero__details">
+              <span class="hero__duration">9 дней/10 ночей</span>
+              <span class="hero__level">Средняя сложность</span>
+            </div>
           </li>
           <li class="hero__item">
             <div class="hero__picture">
@@ -130,8 +133,10 @@
             <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих
               дух ландшафтов Алтайских гор.</p>
             <button class="hero__button" type="button">Смотреть тур</button>
-            <span class="hero__duration">8 дней/7 ночей</span>
-            <span class="hero__level">Лёгкая сложность</span>
+            <div class="hero__details">
+              <span class="hero__duration">8 дней/7 ночей</span>
+              <span class="hero__level">Лёгкая сложность</span>
+            </div>
           </li>
         </ul>
         <div class="hero__bullets">
