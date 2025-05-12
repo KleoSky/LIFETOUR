@@ -4,10 +4,13 @@
 }
 
 .header__wrapper {
-  width: 100%;
   padding: 15px 0;
   box-sizing: border-box;
   position: relative;
+}
+
+.header__nav--opened {
+  z-index: 10;
 }
 
 .header__nav--opened .nav__list {
@@ -85,6 +88,8 @@
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .header__wrapper {
+    min-width: 768px;
+    margin: 0 auto;
     display: flex;
     padding: 20px 45px;
     align-items: center;

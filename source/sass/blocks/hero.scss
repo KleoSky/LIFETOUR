@@ -15,30 +15,28 @@
   color: var(--color-second, #ffffff);
   display: grid;
   grid-template-columns: 15px 55px min-content 55px 15px;
-  grid-template-rows: 40px 104px auto auto 45px auto 104px 56px;
+  grid-template-rows: 40px 81px 1fr 45px auto 104px 36px;
 }
 
-.hero__item h2,
-.hero__item p {
+.hero__info {
   grid-column: 2 / 5;
+  grid-row: 3 / 4;
 }
 
-.hero__item h2 {
+.hero__info h2 {
   font-size: 26px;
   line-height: 1;
   font-weight: 800;
   text-align: center;
   margin: 0;
   margin-bottom: 15px;
-  grid-row: 3 / 4;
 }
 
-.hero__item p {
+.hero__info p {
   font-size: 15px;
   line-height: 1.33;
   text-align: center;
   margin: 15px 0;
-  grid-row: 4 / 5;
 }
 
 .hero__button {
@@ -51,7 +49,7 @@
   color: inherit;
   border-color: transparent;
   grid-column: 3 / 4;
-  grid-row: 6 / 7;
+  grid-row: 5 / 6;
 }
 
 .hero__picture {
@@ -60,9 +58,13 @@
   grid-row: 1 / -1;
 }
 
+.hero picture {
+  line-height: 0;
+}
+
 .hero__bullets {
   position: absolute;
-  top: 628px;
+  top: 636px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -91,18 +93,20 @@
 
   .hero__item {
     grid-template-columns: 45px 249px min-content 249px 45px;
-    grid-template-rows: 342px auto auto 20px auto 302px 100px;
+    grid-template-rows: 85px 257px auto 20px auto 302px 85px;
   }
 
-  .hero__item h2 {
+  .hero__info h2 {
     font-size: 56px;
     grid-row: 2 / 3;
   }
 
-  .hero__item p {
+  .hero__info p {
     font-size: 17px;
     line-height: 1.41;
     grid-row: 3 / 4;
+    margin-right: 89px;
+    margin-left: 89px;
   }
 
   .hero__button {
@@ -131,11 +135,16 @@
   }
 
   .hero__item {
-    grid-template-columns: 120px min-content 600px 420px 120px;
+    grid-template-columns: 120px 780px 420px 120px;
     grid-template-rows: 200px auto auto 10px auto 134px auto 80px;
   }
 
-  .hero__item h2 {
+  .hero__info {
+    width: 944px;
+    grid-column: 2 / 4;
+  }
+
+  .hero__info h2 {
     font-size: 77px;
     text-align: left;
     grid-column: 2 / 5;
@@ -143,20 +152,21 @@
     margin-bottom: 25px;
   }
 
-  .hero__item p {
+  .hero__info p {
     text-align: left;
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-    margin: 25px 0;
+    margin: 25px 472px 25px 0;
   }
 
   .hero__button {
+    width: 180px;
     grid-column: 2 / 3;
     grid-row: 5 / 6;
   }
 
   .hero__details {
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     grid-row: 7 / 8;
     display: flex;
     row-gap: 10px;
@@ -165,7 +175,8 @@
   .hero__details span {
     font-size: 12px;
     line-height: 1.33;
-    padding: 13px 20px 13px 40px;
+    margin-right: 10px;
+    padding: 13px 20px;
     border: 1px solid var(--color-second, #ffffff);
     box-sizing: border-box;
     display: flex;
@@ -175,17 +186,17 @@
 
   .hero__details span::before {
     content: "";
+    display: block;
     width: 11px;
     height: 11px;
-    // background-color: var(--bg-base, #ffffff);
+    background-color: var(--bg-base, #ffffff);
   }
 
-  .hero__details:first-child::before {
-    // mask: url("/__spritemap#sprite-moon-icon-view") center / 11px 11px no-repeat;
-    background-image: url("/__spritemap#sprite-moon-icon-view");
+  .hero__details span:first-child::before {
+    mask: url("/__spritemap#sprite-moon-icon-view") center / 11px 11px no-repeat;
   }
 
-  .hero__details:nth-child(2)::before {
+  .hero__details span:nth-child(2)::before {
     mask: url("/__spritemap#sprite-level-icon-view") center / 10px 11px no-repeat;
   }
 
