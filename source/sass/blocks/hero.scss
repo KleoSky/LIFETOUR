@@ -3,7 +3,7 @@
   background-color: #42618d;
 }
 
-.hero__list {
+.hero__swiper .hero__list {
   width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -13,6 +13,9 @@
 
 .hero__item {
   color: var(--color-second, #ffffff);
+}
+
+.hero__list .hero__item {
   display: grid;
   grid-template-columns: 15px 55px min-content 55px 15px;
   grid-template-rows: 40px 81px 1fr 45px auto 104px 36px;
@@ -62,13 +65,14 @@
   line-height: 0;
 }
 
-.hero__bullets {
+.hero .hero__bullets {
   position: absolute;
   top: 636px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   column-gap: 20px;
+  z-index: 11;
 }
 
 .hero__bullet {
@@ -86,12 +90,12 @@
 }
 
 @media (min-width: 768px) {
-  .hero__list {
+  .hero__swiper .hero__list {
     width: 768px;
     margin: 0 auto;
   }
 
-  .hero__item {
+  .hero__list .hero__item {
     grid-template-columns: 45px 249px min-content 249px 45px;
     grid-template-rows: 85px 257px auto 20px auto 302px 85px;
   }
@@ -113,7 +117,7 @@
     grid-row: 5 / 6;
   }
 
-  .hero__bullets {
+  .hero .hero__bullets {
     top: 1060px;
   }
 
@@ -130,11 +134,11 @@
 }
 
 @media (min-width: 1440px) {
-  .hero__list {
+  .hero__swiper .hero__list {
     width: 1440px;
   }
 
-  .hero__item {
+  .hero__list .hero__item {
     grid-template-columns: 120px 780px 420px 120px;
     grid-template-rows: 200px auto auto 10px auto 134px auto 80px;
   }
@@ -200,7 +204,7 @@
     mask: url("/__spritemap#sprite-level-icon-view") center / 10px 11px no-repeat;
   }
 
-  .hero__bullets {
+  .hero .hero__bullets {
     top: 815px;
     left: 1270px;
   }

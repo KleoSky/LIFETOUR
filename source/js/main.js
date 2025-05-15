@@ -6,3 +6,6 @@
 import { handleWideScreen, initialize } from "./modules/header";
 handleWideScreen();
 initialize();
+
+import { initSwiperHero } from "./modules/hero";
+initSwiperHero();

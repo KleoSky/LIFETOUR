@@ -6,7 +6,7 @@
 .header__wrapper {
   padding: 15px 0;
   box-sizing: border-box;
-  position: relative;
+  // position: relative;
 }
 
 .header__nav--opened {
@@ -104,7 +104,7 @@
   .header__nav--opened .nav__wrapper {
     box-shadow: -225px 0 0 var(--bg-second), 195px 0 0 var(--bg-second);
     padding: 0 45px 70px;
-    top: 83px;
+    top: 82px;
   }
 
   .header__button {
