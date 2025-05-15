@@ -5,6 +5,25 @@
   font-weight: 600;
   text-decoration: none;
   color: var(--color-second, #ffffff);
+
+  &:hover:not(.nav__tel--disabled) {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus:not(.nav__tel--disabled),
+  &:focus-visible:not(:disabled) {
+    color:  var(--color-base, #000000);
+  }
+
+  &:active:not(.nav__tel--disabled) {
+    color: var(--bg-active, #000080);
+  }
+
+  // Добавить класс .nav__tel--disabled для отключения доступности
+  &--disabled {
+    color: #999999;
+    cursor: default;
+  }
 }
 
 .nav__list {

@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  background-color: #42618d;
+  background-color: var(--bg-second, #000080);
 }
 
 .hero__swiper .hero__list {
@@ -18,7 +18,7 @@
 .hero__list .hero__item {
   display: grid;
   grid-template-columns: 15px 55px min-content 55px 15px;
-  grid-template-rows: 40px 81px 1fr 45px auto 104px 36px;
+  grid-template-rows: 40px 104px 1fr 45px auto 126px 36px;
 }
 
 .hero__info {
@@ -47,12 +47,38 @@
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
-  padding: 18px;
+  padding: 19px 18px;
   background-color: var(--bg-second, #000080);
   color: inherit;
-  border-color: transparent;
+  border: 1px solid var(--bg-second, #000080);
+  box-sizing: border-box;
   grid-column: 3 / 4;
   grid-row: 5 / 6;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--bg-base, #ffffff);
+    border: 1px solid var(--bg-active, #000080);
+    color: var(--bg-active, #000080);
+  }
+
+  &:focus:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    background-color: var(--bg-base, #ffffff);
+    border: 1px solid var(--bg-active, #000080);
+    color: var(--bg-active, #000080);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--bg-active, #000080);
+    color: inherit;
+  }
+
+  &:disabled {
+    background-color: #999999;
+    color: inherit;
+    cursor: default;
+  }
 }
 
 .hero__picture {
@@ -67,7 +93,7 @@
 
 .hero .hero__bullets {
   position: absolute;
-  top: 636px;
+  top: 612px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -83,10 +109,45 @@
   background-color: transparent;
   box-sizing: border-box;
   cursor: pointer;
+
+  &:hover:not(:disabled):not(.hero__bullet--active) {
+    background-color: #d9d9d9;
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--bg-active, #000080);
+    color: inherit;
+  }
+
+  &:disabled {
+    background-color: #999999;
+    color: inherit;
+    cursor: default;
+  }
 }
+
+.hero__bullet:focus:not(:disabled):not(.hero__bullet--active),
+.hero__bullet:focus-visible:not(:disabled):not(.hero__bullet--active) {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    &::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
+      border: 1px solid var(--color-second, #ffffff);
+    }
+  }
 
 .hero__bullet--active {
   background-color: var(--bg-base, #ffffff);
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  .hero__swiper .hero__list {
+    height: 568px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -97,7 +158,7 @@
 
   .hero__list .hero__item {
     grid-template-columns: 45px 249px min-content 249px 45px;
-    grid-template-rows: 85px 257px auto 20px auto 302px 85px;
+    grid-template-rows: 85px 257px auto 16px auto 307px 85px;
   }
 
   .hero__info h2 {
@@ -146,6 +207,8 @@
   .hero__info {
     width: 944px;
     grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero__info h2 {
@@ -153,14 +216,14 @@
     text-align: left;
     grid-column: 2 / 5;
     grid-row: 2 / 3;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   .hero__info p {
     text-align: left;
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-    margin: 25px 472px 25px 0;
+    margin: 23px 472px 29px 0;
   }
 
   .hero__button {
